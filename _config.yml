@@ -2,8 +2,8 @@
 name: "olligopolus"
 title: "olligopolus"
 description: "A site about Ollie's new gaming PC."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: 'assets/images/logo2.png'
+favicon: 'assets/images/logo2.png'
 baseurl: /olligopolus
 #google_analytics: 'UA-46278016-1'
 #disqus: 'demowebsite'

@@ -1,15 +1,10 @@
+---
+---
+// This file is the main entry point for all SCSS files.
+// The empty front matter (---) is required for Jekyll to process it.
 
-@use 'starsnonscss' as starsnonscss;
-@use 'syntax' as syntax;
-
-
-/* We need to add display:inline in order to align the '>>' of the 'read more' link */
-.post-excerpt p {
-	display:inline;
-}
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-// @import
-// 	"syntax",
-//     "starsnonscss"
-// ;
+// Import Sass partials. The dark theme is last so it can override
+// styles from the other files.
+@use "syntax";
+@use "starsnonscss";
+//@use "dark-theme";

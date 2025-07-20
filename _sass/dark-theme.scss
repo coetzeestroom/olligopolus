@@ -1,0 +1,112 @@
+// A basic dark theme for the Mediumish template.
+
+// 1. Color Palette
+// -----------------------------------------------------
+$dark-bg: #212529;      // A dark gray for the main background
+$dark-surface: #343a40; // A slightly lighter gray for cards, nav, etc.
+$dark-text: #f8f9fa;      // A light color for primary text
+$dark-lead: #adb5bd;    // A muted color for secondary text
+$dark-link: #61dafb;      // A bright blue for links to stand out
+$dark-border: #495057;   // A subtle border color
+
+// 2. Global Styles
+// -----------------------------------------------------
+body {
+    background-color: $dark-bg;
+    color: $dark-text;
+}
+
+// Invert elements that were previously white
+.bg-white {
+    background-color: $dark-surface !important;
+}
+
+// 3. Component Styles
+// -----------------------------------------------------
+
+// Navigation
+.mediumnavigation {
+    border-bottom-color: $dark-border;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: $dark-text;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: $dark-link;
+}
+
+// Headings and lead text
+.mainheading .sitetitle, .posttitle, h1, h2, h3, h4, h5, h6 {
+    color: $dark-text;
+}
+
+.mainheading .lead, .lead {
+    color: $dark-lead;
+}
+
+// Cards
+.card {
+    background-color: $dark-surface;
+    border-color: $dark-border;
+}
+
+.card-title a.text-dark {
+    color: $dark-text !important;
+    &:hover {
+        color: $dark-link !important;
+    }
+}
+
+.card-text, .card-footer, .author-meta .post-date {
+    color: $dark-lead;
+}
+
+.card-footer {
+    background-color: $dark-surface !important;
+    border-top-color: $dark-border;
+}
+
+// Article Content
+.article-post {
+    color: $dark-lead;
+    a {
+        color: $dark-link;
+    }
+}
+
+// Footer
+.footer {
+    background-color: $dark-surface;
+    border-top: 1px solid $dark-border;
+    color: $dark-lead;
+    a {
+        color: $dark-link;
+    }
+}
+
+// Jumbotron
+.jumbotron.fortags {
+    background: $dark-surface;
+    .transpdark {
+        background: $dark-bg;
+    }
+}
+
+// Search Results Modal
+#lunrsearchresults .modal-content {
+    background-color: $dark-surface;
+    color: $dark-text;
+}
+#lunrsearchresults .modal-header, #lunrsearchresults .modal-footer {
+    border-color: $dark-border;
+}
+.lunrsearchresult a {
+    color: $dark-lead !important;
+}
+.lunrsearchresult .title {
+    color: $dark-link !important;
+}
