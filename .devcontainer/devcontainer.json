@@ -1,0 +1,34 @@
+{
+  "name": "Jekyll website",
+  // Use the Dockerfile in this folder to build every time
+  "build": {
+        "dockerfile": "Dockerfile",
+        "args": {}
+    },
+  // If this is prebuilt and stored in an internal registry, use this instead
+  // "image": "registry.company.us/jekyll-website:latest",
+  //
+  // Forward the website port
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": {
+      "label": "Website"
+    }
+  },
+  // Add VS Code extensions
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "google.geminicodeassist"
+      ]
+    }
+  },
+  // Use the "nonroot" user, default for Chainguard images
+  "remoteUser": "nonroot",
+  // After it's created, run bundle to install dependencies
+  "postCreateCommand": {
+    "bundle": "bundle install --path vendor/bundle --retry 5 --jobs 20"
+  },
+  // After it's launched and VS Code is attached, run Jekyll to serve the website
+  "postAttachCommand": "bundle exec jekyll serve --host 0.0.0.0"
+}
